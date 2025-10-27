@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guilherme Alves — Arquiteto de Soluções .NET Full-Stack</title>
+  <meta name="description" content="ARQUITETO DE SOLUÇÕES .NET FULL-STACK: Transforme seus sistemas .NET legados ou novos em ativos estratégicos com IA, Prompt Engineering e Agentes Autônomos.">
+  <meta property="og:title" content="Guilherme Alves — Arquiteto de Soluções .NET Full-Stack">
+  <meta property="og:description" content="Transforme seus sistemas .NET legados ou novos em ativos estratégicos com IA, Prompt Engineering e Agentes Autônomos.">
+  <meta property="og:image" content="/assets/images/profile.png">
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --midnight: #232946;
+      --royal: #2C365A;
+      --silver: #b8c1ec;
+      --white: #fffffe;
+      --gold: #D4AF37;
+      --platinum: #e5e9f7;
+      --accent: #F5D782;
+      --radius: 22px;
+      --shadow: 0 6px 32px rgba(35,41,70,0.09);
+      --max-w: 900px;
+      --gradient: linear-gradient(120deg, #2C365A 0%, #232946 90%);
+      --gradient-light: linear-gradient(90deg, #e5e9f7 0%, #b8c1ec 100%);
+      --gold-gradient: linear-gradient(90deg, #D4AF37 0%, #F5D782 100%);
+      --transition: all .33s cubic-bezier(.23,.75,.32,1);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+      color: var(--royal);
+      background: var(--platinum);
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      transition: background .25s;
+    }
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+    section {
+      margin: 0 0 2.9rem 0;
+      padding: 0;
+    }
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.7rem;
+      background: var(--gradient);
+      color: var(--white);
+      padding: 5.2rem 0 3.1rem 0; /* padding-top aumentado */
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      animation: fadeInHero 1.1s cubic-bezier(.23,.75,.32,1) both;
+    }
+    @keyframes fadeInHero {
+      0% { opacity:0; transform:translateY(-40px);}
+      100%{ opacity:1; transform:translateY(0);}
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -80px; top: 0;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, #D4AF3733 0%, #23294600 80%);
+      z-index: 0;
+      filter: blur(18px);
+      opacity:.9;
+      transition: var(--transition);
+    }
+    .hero-text {
+      flex: 1 1 330px;
+      min-width: 260px;
+      z-index: 1;
+    }
+    .hero-photo {
+      flex: 0 1 220px;
+      text-align: center;
+      z-index: 1;
+    }
+    .hero-photo img {
+      width: 175px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--gold);
+      box-shadow: 0 12px 38px #2329461a;
+      background: #fff;
+      transition: transform .29s cubic-bezier(.2,.8,.2,1), box-shadow .29s;
+      filter: grayscale(.04) contrast(1.05);
+    }
+    .hero-photo img:hover { transform: scale(1.04) rotate(-2deg); box-shadow: 0 18px 54px #D4AF3740; }
+    .hero h1 {
+      font-size: 2.15rem;
+      font-weight: 800;
+      line-height: 1.14;
+      margin-top: 0;
+      margin-bottom: .7rem;
+      letter-spacing: -0.01em;
+      text-shadow: 0 3px 24px #D4AF3722;
+      background: -webkit-linear-gradient(120deg, #F5D782 0%, #D4AF37 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero h2 {
+      font-size: 1.13rem;
+      font-weight: 600;
+      margin: .5rem 0 0 0;
+      color: var(--gold);
+      text-shadow: 0 2px 12px #F5D78222;
+    }
+    .hero p {
+      margin-top: 1.2rem;
+      font-size: 1.07rem;
+      color: var(--silver);
+      font-weight: 500;
+      text-shadow: 0 1px 8px #fffffe16;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 1.13rem;
+      font-weight: 700;
+      background: var(--gold-gradient);
+      color: var(--royal);
+      padding: 0.85rem 2.2rem;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px #D4AF3740;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-btn:hover {
+      filter: brightness(.97);
+      box-shadow: 0 18px 54px #D4AF3740;
+      transform: translateY(-2px) scale(1.03);
+      background: linear-gradient(90deg,#F5D782 0%, #D4AF37 100%);
+      color: #232946;
+    }
+    /* CARDS */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 1.8rem 1.5rem 1.8rem; /* padding-top aumentado */
+      margin: 1.3rem 0;
+      border: 1.5px solid #e5e9f7;
+      transition: box-shadow .22s, transform .22s;
+      position: relative;
+      animation: fadeInUp .95s cubic-bezier(.23,.75,.32,1) both;
+    }
+    .card::before {
+      content:"";
+      position:absolute;
+      left:-70px; top:-50px;
+      width:140px; height:140px;
+      background: radial-gradient(circle, #b8c1ec22 0%, #fff0 80%);
+      filter: blur(18px);
+      opacity:.9;
+      z-index:0;
+      transition: var(--transition);
+    }
+    .card:hover { box-shadow: 0 20px 44px #2C365A22; transform: translateY(-2px) scale(1.012); }
+    @keyframes fadeInUp {
+      0% { opacity:0; transform:translateY(34px);}
+      100%{ opacity:1; transform:translateY(0);}
+    }
+    /* ACCENT SECTION */
+    .accent-section {
+      background: var(--midnight);
+      color: var(--platinum);
+      border-radius: var(--radius);
+      padding: 2.3rem 1.6rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      border: 1.5px solid #D4AF3722;
+      animation: fadeInAccent 1.1s cubic-bezier(.23,.75,.32,1) both;
+    }
+    @keyframes fadeInAccent {
+      0% { opacity:0; transform:translateY(60px) scale(.96);}
+      100%{ opacity:1; transform:translateY(0) scale(1);}
+    }
+    .accent-section::after {
+      content: "";
+      position: absolute;
+      right: -80px; bottom: 20px;
+      width: 270px; height: 270px;
+      background: radial-gradient(circle, #e5e9f744 0%, #23294600 80%);
+      z-index: 0;
+      filter: blur(14px);
+      opacity:.9;
+      transition: var(--transition);
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin: 1.1rem 0 0 0;
+      padding: 0;
+      list-style: none;
+      position:relative;
+      z-index:2;
+    }
+    .badge {
+      background: var(--gold);
+      color: var(--midnight);
+      padding: .48rem .95rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .98rem;
+      letter-spacing: .01em;
+      margin-bottom: .3rem;
+      box-shadow: 0 2px 10px #D4AF3718;
+      border: 1px solid #F5D782;
+      transition: background .17s;
+    }
+    .badge:hover { background: var(--accent); }
+    .stack-list p { margin: .18rem 0; font-size: .99rem; }
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--gradient-light);
+      color: var(--royal);
+      padding: 2.3rem 1.6rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 1.5px solid #b8c1ec55;
+      animation: fadeInUp .88s cubic-bezier(.23,.75,.32,1) both;
+    }
+    .cta-final .cta-btn,
+    .cta-final .cta-btn-outline {
+      margin: .6rem .4rem 0 .4rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 1.05rem;
+      border-radius: 9px;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(44,54,90,0.10);
+      text-decoration: none;
+      transition: filter .13s, background .19s, color .19s;
+      display: inline-block;
+      border: none;
+      background: var(--gold-gradient);
+      color: var(--midnight);
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-final .cta-btn-outline {
+      background: transparent;
+      color: var(--midnight);
+      border: 2px solid var(--gold);
+      letter-spacing: .02em;
+      box-shadow: none;
+    }
+    .cta-final .cta-btn:hover,
+    .cta-final .cta-btn-outline:hover { filter: brightness(.96); background: linear-gradient(90deg,#F5D782 0%, #D4AF37 100%); color: #232946; }
+    footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 1rem;
+      padding: 2.3rem 0 .5rem 0;
+      letter-spacing: .01em;
+      background: none;
+    }
+    section h2,
+    .cta-final h2,
+    .accent-section h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: .7rem;
+      letter-spacing: -.01em;
+      text-shadow: 0 2px 18px #D4AF3708;
+    }
+    section h3,
+    section h4 {
+      margin-bottom: .45rem;
+      margin-top: 1.2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--gold);
+    }
+    ul, ol { margin-top: .3rem; margin-bottom: 1.15rem; }
+    li { margin-bottom: .18rem; }
+    /* interaction */
+    .card, .accent-section, .cta-final {
+      transition: var(--transition);
+    }
+    /* Responsividade */
+    @media (max-width: 750px) {
+      .hero { flex-direction: column; text-align: center; padding: 2.8rem 0 2rem 0; }
+      .hero-photo img { width: 108px; height: 108px; }
+      main { padding: 0 .5rem; }
+      section { margin-bottom: 2rem; }
+      .card, .accent-section, .cta-final { padding: 1rem .7rem; }
+      h1 { font-size: 1.35rem !important; }
+      h2 { font-size: 1.13rem !important; }
+    }
+    @media (max-width: 480px) {
+      .hero-photo img { width: 70px; height: 70px; }
+      .badge { font-size: .93rem; padding: .28rem .55rem;}
+      .cta-btn, .cta-btn-outline { font-size: .95rem; }
+      .card { padding-top:1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- A. HERO -->
+    <section class="hero">
+      <div class="hero-photo">
+        <img src="assets/images/profile.png" alt="Foto profissional Guilherme Alves" loading="lazy">
+      </div>
+      <div class="hero-text">
+        <h1>
+          ARQUITETO DE SOLUÇÕES .NET FULL-STACK: DA ROBUSTEZ TRADICIONAL À INOVAÇÃO COM INTELIGÊNCIA ARTIFICIAL (IA).
+        </h1>
+        <h2>
+          Transforme seus sistemas .NET legados ou novos em ativos estratégicos, utilizando Inteligência Artificial (AI Integration), Prompt Engineering e Agentes Autônomos para máxima eficiência, automação e redução de custos.
+        </h2>
+        <p>
+          Desenvolvedor He/Him, com vasta experiência em C#, ASP.NET Core, SQL, Javascript, HTML, CSS, AZURE, AWS e metodologia SCRUM. Atuante no mercado desde 2014.
+        </p>
+        <a class="cta-btn" href="#contato">CLIQUE AQUI — Inicie a Transformação Digital com IA</a>
+      </div>
+    </section>
+    <!-- ... (demais seções idênticas ao modelo refinado) ... -->
+    <!-- B. SOLUÇÃO E DIFERENCIAL -->
+    <section>
+      <div class="card">
+        <h2>SAIA DO CÓDIGO PADRÃO: Sistemas Robustos que Já Nascem Inteligentes.</h2>
+        <p>
+          A complexidade dos sistemas modernos exige mais do que apenas código funcional; exige inteligência. Minha expertise se concentra em ir além do desenvolvimento Full-Stack, integrando IA de forma arquiteturalmente segura e eficiente.
+        </p>
+        <p>
+          Através do conhecimento adquirido em programas como a Imersão IA 3ª Edição (Alura & Google) e o Workshop Code & IA, eu garanto que suas soluções utilizem as melhores práticas de:
+        </p>
+        <ul>
+          <li>Prompt Engineering para otimizar interações e resultados da IA.</li>
+          <li>Desenvolvimento de Chatbots (Chatbot Development).</li>
+          <li>Geração de Valor com IA Generativa (incluindo Generative AI for Sales).</li>
+          <li>Criação de AI Agents para tarefas autônomas.</li>
+        </ul>
+        <h3>Prova de Conceito (Case de Sucesso)</h3>
+        <p>
+          Em um projeto recente, desenvolvi uma aplicação Full-Stack com IA integrada capaz de gerar resumos inteligentes, áudios e flashcards de estudo. Para isso, utilizei C#, .NET Core, React, MongoDB, e realizei integrações com a API da OpenAI, ElevenLabs, N8N (automação), AWS e Z-api (integração com WhatsApp). Minha abordagem inclui evitar o vendor lock-in e aplicar boas práticas de segurança, como a gestão de custos por token e API Keys.
+        </p>
+      </div>
+    </section>
+    <!-- C. CREDIBILIDADE -->
+    <section>
+      <div class="accent-section">
+        <h2>MAIS DE UMA DÉCADA DE SUCESSO: Experiência Comprovada em Corporações Líderes.</h2>
+        <p>
+          Desde 2014, presto serviço como consultor de tecnologia e desenvolvedor de software em grandes corporações nacionais e multinacionais. Minha atuação abrange papéis como Analista de Sistemas e Requisitos, Programador .NET Full-Stack, e Liderança técnica em projetos de software.
+        </p>
+        <h4>Principais Clientes:</h4>
+        <ul class="badge-list">
+          <li class="badge">Caixa Seguradora</li>
+          <li class="badge">Shell Brasil (via act digital)</li>
+          <li class="badge">Havaianas</li>
+          <li class="badge">ANTT</li>
+          <li class="badge">Sesc Bahia</li>
+          <li class="badge">Raízes Energia</li>
+          <li class="badge">Grão Pará Mineradora</li>
+          <li class="badge">Tribunal de Contas de Goiás</li>
+        </ul>
+        <p>
+          Resultados Entregues: Colaborei no desenvolvimento de sistemas complexos, incluindo logística e transporte, gestão financeira, mercado de seguros, controle de ponto, requisição de materiais e pesquisa de satisfação.
+        </p>
+      </div>
+    </section>
+    <!-- D. DETALHES TÉCNICOS -->
+    <section>
+      <div class="card">
+        <h2>A STACK DE ALTO DESEMPENHO: Tecnologias que Geram Escalabilidade.</h2>
+        <h4>Desenvolvimento Full-Stack</h4>
+        <p>
+          Foco em C#, ASP.NET Core, e desenvolvimento .NET (incluindo VB.NET em projetos mais antigos). Experiência com Autenticação JWT, ORM Entity Framework e aprofundamento em REST API's RESTFul. No Front-end, domino Javascript, Jquery, Vue.js e o desenvolvimento de aplicativo Xamarin.
+        </p>
+        <h4>Infraestrutura, DevOps e Arquitetura</h4>
+        <p>
+          Possuo experiência com Cloud Computing em AZURE e AWS (Amazon Web Services). Utilizo Git para versionamento de código e possuo conhecimento em manipulação do framework Azure DevOps e TFS. Atuo na implantação da metodologia DDD (Domain Driven Design) e em migração de arquitetura de software, utilizando a criação de diagramas UML para modelagem.
+        </p>
+        <div class="stack-list">
+          <p><strong>Back:</strong> C#, ASP.NET Core, Entity Framework</p>
+          <p><strong>Front:</strong> JavaScript, Vue.js, jQuery, HTML/CSS</p>
+          <p><strong>DB:</strong> SQL Server, PostgreSQL, MongoDB</p>
+          <p><strong>Infra:</strong> Azure, AWS, Docker, n8n</p>
+          <p><strong>IA:</strong> OpenAI, ElevenLabs, Agents, Prompt Engineering</p>
+        </div>
+      </div>
+    </section>
+    <!-- E. CULTURA E ENGAJAMENTO -->
+    <section>
+      <div class="card">
+        <h2>MAIS QUE CÓDIGO: Transparência e Confiança no Centro do Projeto.</h2>
+        <p>
+          Além da excelência técnica, a entrega de projetos de sucesso depende da colaboração. Preservo características essenciais, como ser transparente com todos os stakeholders, atuar como um Team Player, e valorizar a Confiança e o Respeito mútuo em todas as interações. Minha formação acadêmica é em Análise e desenvolvimento de sistemas de informação pelo Instituto Federal de Goiás (IFG).
+        </p>
+        <ul>
+          <li>Comunicação clara e documentada</li>
+          <li>Entregas iterativas com foco em valor</li>
+          <li>Teste, monitoramento e otimização contínua</li>
+        </ul>
+      </div>
+    </section>
+    <!-- F. CALL TO ACTION FINAL -->
+    <section class="cta-final" id="contato">
+      <h2>PRONTO PARA LIDERAR A PRÓXIMA ONDA DE INOVAÇÃO EM SEUS SISTEMAS?</h2>
+      <p style="max-width:650px; margin: 1rem auto 1.4rem auto;">
+        Solicite minha consultoria técnica e descubra como a integração estratégica de IA pode alavancar seu projeto.
+      </p>
+      <a class="cta-btn" href="mailto:guii05@hotmail.com">SOLICITE MINHA CONSULTORIA TÉCNICA AGORA</a>
+      <a class="cta-btn-outline" href="https://wa.me/5562996749356" target="_blank" rel="noopener">WhatsApp: (62) 99674-9356</a>
+      <a class="cta-btn-outline" href="https://github.com/guialiveira" target="_blank" rel="noopener">Portfólio / GitHub</a>
+      <p style="margin-top:1.2rem;">E-mail: <a href="mailto:guii05@hotmail.com" style="color:inherit;">guii05@hotmail.com</a></p>
+    </section>
+    <footer>
+      © 2025 Guilherme Alves — Arquiteto de Soluções .NET Full‑Stack
+    </footer>
+  </main>
+</body>
+</html>
