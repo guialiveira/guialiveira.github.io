@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "imgAlt": "Professional photo of Guilherme Alves",
+    "title": "FULL-STACK .NET SOLUTIONS ARCHITECT: FROM TRADITIONAL ROBUSTNESS TO INNOVATION WITH ARTIFICIAL INTELLIGENCE (AI).",
+    "subtitle": "Turn your legacy or new .NET systems into strategic assets by leveraging AI Integration, Prompt Engineering, and Autonomous Agents for maximum efficiency, automation, and cost reduction.",
+    "intro": "Developer He/Him, with extensive experience in C#, ASP.NET Core, SQL, JavaScript, HTML, CSS, AZURE, AWS, and the SCRUM methodology. Active in the market since 2014.",
+    "cta": "CLICK HERE — Start your AI Digital Transformation"
+  },
+  "solucao": {
+    "title": "GO BEYOND STANDARD CODE: Robust Systems that Are Born Intelligent.",
+    "p1": "The complexity of modern systems requires more than just functional code; it requires intelligence. My expertise goes beyond Full-Stack development, architecting safe and efficient AI integrations.",
+    "p2": "With knowledge gained from programs such as Alura & Google’s AI Immersion (3rd Edition) and the Code & AI Workshop, I ensure your solutions follow best practices in:",
+    "li1": "Prompt Engineering to optimize AI interactions and outcomes.",
+    "li2": "Chatbot Development.",
+    "li3": "Value Generation with Generative AI (including Generative AI for Sales).",
+    "li4": "Creating AI Agents for autonomous tasks.",
+    "caseTitle": "Proof of Concept (Success Case)",
+    "caseText": "In a recent project, I built a Full-Stack application with integrated AI capable of generating intelligent summaries, audio, and study flashcards. I used C#, .NET Core, React, and MongoDB, and integrated with the OpenAI API, ElevenLabs, N8N (automation), AWS, and Z-api (WhatsApp). My approach avoids vendor lock-in and applies security best practices, such as cost control per token and API Keys management."
+  },
+  "cred": {
+    "title": "OVER A DECADE OF SUCCESS: Proven Experience in Leading Corporations.",
+    "p": "Since 2014, I have served as a technology consultant and software developer for large national and multinational corporations. My roles include Systems and Requirements Analyst, Full-Stack .NET Developer, and Technical Lead on software projects.",
+    "clients": "Key Clients:",
+    "p2": "Delivered Results: I collaborated on complex systems, including logistics and transportation, financial management, insurance, time tracking, materials requisition, and satisfaction surveys."
+  },
+  "tech": {
+    "title": "THE HIGH-PERFORMANCE STACK: Technologies that Drive Scalability.",
+    "h4_1": "Full-Stack Development",
+    "p1": "Focus on C#, ASP.NET Core, and .NET development (including VB.NET for older projects). Experience with JWT Authentication, Entity Framework ORM, and deep RESTful APIs. On the Front-end, I master JavaScript, jQuery, Vue.js, and Xamarin app development.",
+    "h4_2": "Infrastructure, DevOps and Architecture",
+    "p2": "Experience with Cloud Computing on AZURE and AWS (Amazon Web Services). I use Git for version control and have knowledge of Azure DevOps and TFS. I implement DDD (Domain-Driven Design) and software architecture migration, using UML diagrams for modeling.",
+    "stackBack": "<strong>Back-end:</strong> C#, ASP.NET Core, Entity Framework",
+    "stackFront": "<strong>Front-end:</strong> JavaScript, Vue.js, jQuery, HTML/CSS",
+    "stackDb": "<strong>DB:</strong> SQL Server, PostgreSQL, MongoDB",
+    "stackInfra": "<strong>Infra:</strong> Azure, AWS, Docker, n8n",
+    "stackAI": "<strong>AI:</strong> OpenAI, ElevenLabs, Agents, Prompt Engineering"
+  },
+  "culture": {
+    "title": "MORE THAN CODE: Transparency and Trust at the Core of the Project.",
+    "p": "Beyond technical excellence, successful delivery depends on collaboration. I value being transparent with all stakeholders, acting as a Team Player, and maintaining Trust and mutual Respect in every interaction. I hold a degree in Systems Analysis and Development from the Federal Institute of Goiás (IFG).",
+    "li1": "Clear and well-documented communication",
+    "li2": "Iterative deliveries focused on value",
+    "li3": "Continuous testing, monitoring, and optimization"
+  },
+  "cta": {
+    "title": "READY TO LEAD THE NEXT WAVE OF INNOVATION IN YOUR SYSTEMS?",
+    "p": "Request my technical consulting and discover how a strategic AI integration can boost your project.",
+    "btn1": "REQUEST MY TECHNICAL CONSULTING NOW",
+    "btn2": "WhatsApp: +55 (62) 99674-9356",
+    "btn3": "Portfolio / GitHub",
+    "email": "Email: <a href=\"mailto:guii05@hotmail.com\" style=\"color:inherit;\">guii05@hotmail.com</a>"
+  },
+  "footer": {
+    "copy": "© 2025 Guilherme Alves — Full‑Stack .NET Solutions Architect"
+  }
+}

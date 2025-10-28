@@ -311,7 +311,7 @@ li { margin-bottom: .18rem; }
 @media (max-width: 750px) {
   /* Manter padding horizontal fluido também em telas menores (antes era sobrescrito com 0) */
   /* Reduzir gap vertical para diminuir distância entre imagem e texto no mobile */
-  .hero { flex-direction: column; text-align: center; padding: 2.8rem clamp(0.6rem, 1.2vw, 1.2rem) 2rem clamp(0.6rem, 1.2vw, 1.2rem); box-sizing: border-box; gap: 0.6rem; }
+  .hero { flex-direction: column; text-align: center; padding: 2.4rem clamp(0.6rem, 1.2vw, 1.2rem) 1.8rem clamp(0.6rem, 1.2vw, 1.2rem); box-sizing: border-box; gap: 0.5rem; }
   /* sizing agora tratado via clamp() no seletor base (.hero-photo img) */
   main { padding: 0 .5rem; }
   section { margin-bottom: 2rem; }
@@ -327,3 +327,28 @@ li { margin-bottom: .18rem; }
 }
 
 /* fim dos estilos extraídos */
+
+/* Language switcher */
+.lang-switch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+  display: flex;
+  gap: 6px;
+}
+.lang-switch button, .lang-switch a {
+  appearance: none;
+  border: 1px solid #D4AF37;
+  background: #fffffe;
+  color: #232946;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(35,41,70,0.12);
+}
+.lang-switch button[aria-pressed="true"], .lang-switch a[aria-current="true"]{
+  background: linear-gradient(90deg, #D4AF37 0%, #F5D782 100%);
+  color: #232946;
+}
