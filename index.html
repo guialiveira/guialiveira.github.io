@@ -56,7 +56,8 @@
       gap: 2.7rem;
       background: var(--gradient);
       color: var(--white);
-      padding: 5.2rem 0 3.1rem 0; /* padding-top aumentado */
+      /* padding vertical original + padding horizontal fluido para a sessão */
+      padding: 5.2rem clamp(0.6rem, 1.2vw, 1.2rem) 3.1rem clamp(0.6rem, 1.2vw, 1.2rem);
       border-radius: 0 0 var(--radius) var(--radius);
       box-shadow: var(--shadow);
       position: relative;
@@ -90,11 +91,12 @@
       z-index: 1;
     }
     .hero-photo img {
-      width: 175px;
-      height: 175px;
+      /* sizing fluido: mínimo 120px, máximo 175px, escala conforme a viewport */
+      width: clamp(130px, 14vw, 185px);
+      aspect-ratio: 1 / 1; /* garante que a imagem continue quadrada */
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid var(--gold);
+      border: clamp(2px, 0.8vw, 5px) solid var(--gold);
       box-shadow: 0 12px 38px #2329461a;
       background: #fff;
       transition: transform .29s cubic-bezier(.2,.8,.2,1), box-shadow .29s;
@@ -303,8 +305,9 @@
     }
     /* Responsividade */
     @media (max-width: 750px) {
-      .hero { flex-direction: column; text-align: center; padding: 2.8rem 0 2rem 0; }
-      .hero-photo img { width: 108px; height: 108px; }
+      /* Manter padding horizontal fluido também em telas menores (antes era sobrescrito com 0) */
+      .hero { flex-direction: column; text-align: center; padding: 2.8rem clamp(0.6rem, 1.2vw, 1.2rem) 2rem clamp(0.6rem, 1.2vw, 1.2rem); box-sizing: border-box; }
+  /* sizing agora tratado via clamp() no seletor base (.hero-photo img) */
       main { padding: 0 .5rem; }
       section { margin-bottom: 2rem; }
       .card, .accent-section, .cta-final { padding: 1rem .7rem; }
@@ -312,7 +315,7 @@
       h2 { font-size: 1.13rem !important; }
     }
     @media (max-width: 480px) {
-      .hero-photo img { width: 70px; height: 70px; }
+  /* sizing agora tratado via clamp() no seletor base (.hero-photo img) */
       .badge { font-size: .93rem; padding: .28rem .55rem;}
       .cta-btn, .cta-btn-outline { font-size: .95rem; }
       .card { padding-top:1.3rem; }
